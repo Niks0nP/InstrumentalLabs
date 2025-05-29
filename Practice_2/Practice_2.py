@@ -136,6 +136,7 @@ class EmailForm(QtWidgets.QWidget):
         self.attachments = []
 
         self.ui.pushButton_2.clicked.connect(self.open_file)
+        self.ui.pushButton.clicked.connect(self.send_email)
 
     def open_file(self):
         file_path, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Открыть файл", "", "All Files (*)")

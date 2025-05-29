@@ -3,7 +3,7 @@ import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 
 sender_email = "nikita.niko40@gmail.com"
 sender_password = "tdnu tffp zovp efyb"
