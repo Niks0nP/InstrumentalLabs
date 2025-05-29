@@ -1,0 +1,8 @@
+
+Email nikita.niko40@gmail.com,Carol Smirnova,AlphaGroup,QA Engineer,C:\Files\doc3.pdf; тема: dfv; сообщение: dfvd
+
+Email nikita.niko40@gmail.com,Carol Smirnova,AlphaGroup,QA Engineer,C:\Files\doc3.pdf; тема: Печин_Практическая_3; сообщение: Текст
+
+Email nikita.niko40@gmail.com,Carol Smirnova,AlphaGroup,QA Engineer,C:\Files\doc3.pdf; тема: Печин_Практическая_3; сообщение: Текст
+
+Email nikita.niko40@mail.ru,Carol Smirnova,AlphaGroup,QA Engineer,C:\Files\doc3.pdf; тема: Печин_Практическая_3; сообщение: Текст
