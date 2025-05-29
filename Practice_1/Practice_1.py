@@ -29,11 +29,11 @@ class Ui_Form(object):
 
         self.lineEdit = QtWidgets.QLineEdit(Form)
 
-        self.lineEdit.setGeometry(QtCore.QRect(140, 60, 171, 31))
+        self.lineEdit.setGeometry(QtCore.QRect(140, 60, 281, 31))
         self.lineEdit.setObjectName("lineEdit")
 
         self.lineEdit_2 = QtWidgets.QLineEdit(Form)
-        self.lineEdit_2.setGeometry(QtCore.QRect(140, 100, 171, 31))
+        self.lineEdit_2.setGeometry(QtCore.QRect(140, 100, 281, 31))
         self.lineEdit_2.setObjectName("lineEdit_2")
 
         self.textEdit = QtWidgets.QTextEdit(Form)
