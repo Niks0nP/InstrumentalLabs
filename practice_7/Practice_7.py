@@ -1,7 +1,8 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtSql import QSqlDatabase, QSqlQuery, QSqlQueryModel
+
+from PySide6 import QtCore, QtGui, QtWidgets
+from PySide6.QtSql import QSqlDatabase, QSqlQuery, QSqlQueryModel
 import sys
-import os
+
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
