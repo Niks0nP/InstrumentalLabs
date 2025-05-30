@@ -62,10 +62,10 @@ class DatabaseApp(QtWidgets.QWidget, Ui_Form):
                 QSqlDatabase.removeDatabase(self.connection_name)
 
             self.db = QSqlDatabase.addDatabase("QPSQL", self.connection_name)
-            self.db.setHostName("7bd8a-rw.db.pub.dbaas.postgrespro.ru")
-            self.db.setDatabaseName("dbstud")
-            self.db.setUserName("le_tz")
-            self.db.setPassword("24OOx$l###")
+            self.db.setHostName("localhost")
+            self.db.setDatabaseName("postgres")
+            self.db.setUserName("postgres")
+            self.db.setPassword("2413")
             self.db.setPort(5432)
 
             if not self.db.open():
