@@ -3,7 +3,7 @@ import smtplib
 import csv
 import os
 import mimetypes
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
@@ -189,29 +189,30 @@ class EmailSender(QtWidgets.QWidget):
         for f in files:
             print(f"Checking file: {f} -> Exists: {os.path.exists(f)}")
 
-        def attach_file(self, msg, filepath):
-            filename = os.path.basename(filepath)
-            ctype, encoding = mimetypes.guess_type(filepath)
+    def attach_file(self, msg, filepath):
+        filename = os.path.basename(filepath)
+        ctype, encoding = mimetypes.guess_type(filepath)
 
-            if ctype is None or encoding is not None:
-                ctype = 'application/octet-stream'
+        if ctype is None or encoding is not None:
+            ctype = 'application/octet-stream'
 
-            maintype, subtype = ctype.split('/', 1)
+        maintype, subtype = ctype.split('/', 1)
 
-            with open(filepath, 'rb') as fp:
-                if maintype == 'text':
-                    file = MIMEText(fp.read().decode('utf-8', errors = 'ignore'), _subtype = subtype)
-                elif maintype == 'image':
-                    file = MIMEImage(fp.read(), _subtype=subtype)
-                elif maintype == 'audio':
-                    file = MIMEAudio(fp.read(), _subtype=subtype)
-                else:
-                    file = MIMEBase(maintype, subtype)
-                    file.set_payload(fp.read())
-                    encoders.encode_base64(file)
+        with open(filepath, 'rb') as fp:
+            if maintype == 'text':
+                file = MIMEText(fp.read().decode('utf-8', errors='ignore'), _subtype=subtype)
+            elif maintype == 'image':
+                file = MIMEImage(fp.read(), _subtype=subtype)
+            elif maintype == 'audio':
+                file = MIMEAudio(fp.read(), _subtype=subtype)
+            else:
+                file = MIMEBase(maintype, subtype)
+                file.set_payload(fp.read())
+                encoders.encode_base64(file)
 
-            file.add_header('Content-Disposition', 'attachment', filename=filename)
-            msg.attach(file)
+        file.add_header('Content-Disposition', 'attachment', filename=filename)
+        msg.attach(file)
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
